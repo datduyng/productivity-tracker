@@ -3,9 +3,9 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   context: path.join(__dirname, './'),
-  entry: './views/app.jsx',
+  entry: './client/app.jsx',
   output: {
-    path: path.join(__dirname, 'views/views'),
+    path: path.join(__dirname, 'client/views'),
     filename: 'bundle.js',
   },
   resolve: {
@@ -17,7 +17,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'jsx-loader',
         exclude: /node_modules/,
-        include: path.join(__dirname, 'views'),
+        include: path.join(__dirname, 'client'),
       },
       {
         test: /\.css$/,
@@ -26,7 +26,7 @@ module.exports = {
           'css-loader'
         ],
         exclude: /node_modules/,
-        include: path.join(__dirname, 'views'),
+        include: path.join(__dirname, 'client'),
       },
     ],
   },

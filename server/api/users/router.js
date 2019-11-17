@@ -55,11 +55,4 @@ router.post('/', users.post);
 // router.put('/', users.put);
 // router.delete('/:user_id', users.delete);
 
-router.get("/login", (req, res, next) => {
-    // response.sendFile('/client/index.html', { root: '/'});
-  console.log('login');
-    res.render("pages/Login", {test: 'test'});
-});
-
-
 module.exports = router;
