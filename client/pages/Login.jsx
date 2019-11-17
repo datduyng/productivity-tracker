@@ -12,8 +12,12 @@ module.exports = class Login extends React.Component {
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
   onSubmit(event){
-    alert('A name was submitted: ' + this.state.value);
-    console.log('submit', event);
+    if(this.state.email != '' && this.state.password != ''){
+      alert('A name was submitted: ' + this.state.email);
+      this.props.history.push('/dashboard');
+      return;
+    }  
+    alert('please authenticate');
   }
   handleEmailChange(event){
     this.setState({
