@@ -14,6 +14,7 @@ const HelloWorld = require('./components/HelloWorld');
 
 /* Import page */
 const Login = require('./pages/Login');
+const DashBoard = require('./pages/DashBoard');
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
 
           <Route exact path='/login' component={Login}/>
           
+          <Route exact path='/dashboard' component={DashBoard}/>
         </Switch>
       </div>
     )
