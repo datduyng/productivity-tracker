@@ -8,6 +8,8 @@ module.exports = class Login extends React.Component {
       password: '',
     };
     this.onSubmit = this.onSubmit.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
   onSubmit(event){
     alert('A name was submitted: ' + this.state.value);
@@ -31,20 +33,18 @@ module.exports = class Login extends React.Component {
         className="form-inside-input"
         onSubmit={this.onSubmit}
       >
-        <label htmlFor="uname"><b>Username</b></label>
+        <label><b>Username</b></label>
         <input 
           type="text" 
           placeholder="Enter Username" 
-          name="uname" 
           value={this.state.email}
           onChange={this.handleEmailChange}
           required /> 
 
-        <label htmlFor="psw"><b>Password</b></label>
+        <label><b>Password</b></label>
         <input 
           type="password" 
           placeholder="Enter Password" 
-          name="psw" 
           value={this.state.password}
           onChange={this.handlePasswordChange}
           required />
